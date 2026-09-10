@@ -6,14 +6,12 @@ on:
 
 jobs:
   code-scan:
-<<<<<<< HEAD
+  
     runs-on:ubuntu-latest
     strategy:
       matrix:
         python-version: [3.12,3.13,3.14]
-=======
-    runs-on: ubuntu-latest
->>>>>>> b4498beca396cf6c9ef6b09fefe042bfc36afb06
+
     steps:
 
       - name: Checkout code  
