@@ -6,8 +6,8 @@ on:
 
 jobs:
   code-scan:
-  
-    runs-on:ubuntu-latest
+
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: [3.12,3.13,3.14]
