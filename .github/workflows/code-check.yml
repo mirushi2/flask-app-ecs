@@ -1,0 +1,24 @@
+name: Code Scan
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  code-scan:
+    runs-on:ubuntu-latest
+    steps:
+
+      - name: Checkout code  
+        uses: actions/checkout@v4
+
+      - name: Setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.13
+
+      - name: Install linter flake 8
+        run : pip install flake8
+
+      - name: Run linter flake 8
+        run: flake8 app.py
